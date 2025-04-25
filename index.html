@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiRoutes - Planificador de Rutas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">OptiRoutes - 🚚 Planificador de Rutas</h1>
+            <p class="description">Optimiza las rutas de distribución logística en un clic.</p>
+        </header>
+
+        <section class="form-container">
+            <div class="form-box">
+                <form id="vrpForm">
+                    <div class="input-group">
+                        <label for="almacen">Almacén de salida</label>
+                        <select id="almacen" required>
+                            <option value="CDMX">CDMX</option>
+                            <option value="EDO.MEX">EDO.MEX</option>
+                            <option value="QRO">QRO</option>
+                            <option value="SPL">SPL</option>
+                            <option value="MTY">MTY</option>
+                            <option value="PUE">PUE</option>
+                            <option value="GDL">GDL</option>
+                            <option value="MICH">MICH</option>
+                            <option value="SON">SON</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="max_carga">Máxima carga (kg)</label>
+                        <input type="number" id="max_carga" value="10" required />
+                    </div>
+
+                    <div class="traffic-restrictions">
+                        <label for="restricciones">Restricciones de tráfico (opcional)</label>
+                        <div id="restriccionesContainer"></div>
+                        <button type="button" id="agregarRestriccion" class="btn add-restriction">+ Añadir Restricción</button>
+                    </div>
+
+                    <button type="submit" class="btn submit-btn">Calcular Rutas</button>
+                </form>
+            </div>
+        </section>
+        <section id="resultados" class="results-container">
+            <h2>Resultados de Rutas:</h2>
+            <div id="rutasDetalles" class="routes-details"></div>
+        </section>
+        <h2>Mapa de Rutas:</h2>
+        <section id="mapa" class="map-container">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

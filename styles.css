@@ -1,0 +1,160 @@
+/* Fuentes generales */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Sección del formulario */
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.form-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.traffic-restrictions {
+  margin-bottom: 20px;
+}
+
+#restriccionesContainer {
+  margin-top: 10px;
+}
+
+.add-restriction {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-restriction:hover {
+  background-color: #45a049;
+}
+
+.submit-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Resultados */
+.results-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#mapa {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #e9ecef;
+}
+
+.routes-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.routes-details h2 {
+  color: #333;
+}
+
+.routes-details .ruta {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.routes-details .ruta h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #007BFF;
+}
+
+.routes-details .ruta p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
