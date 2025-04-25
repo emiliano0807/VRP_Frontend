@@ -12,29 +12,6 @@ const ubicaciones = {
 
 let restriccionCount = 0;
 
-document.getElementById('agregarRestriccion').addEventListener('click', () => {
-  if (restriccionCount >= 10) {
-    Swal.fire("Límite alcanzado", "Máximo 10 restricciones.", "warning");
-    return;
-  }
-
-  const contenedor = document.getElementById('restriccionesContainer');
-  const div = document.createElement('div');
-  div.className = 'restriccion';
-  div.innerHTML = `
-    <input placeholder="Origen (ej: QRO)" class="origen" required />
-    <input placeholder="Destino (ej: PUE)" class="destino" required />
-    <button type="button" class="borrarRestriccion">❌</button>
-  `;
-  contenedor.appendChild(div);
-  restriccionCount++;
-
-  div.querySelector('.borrarRestriccion').addEventListener('click', () => {
-    div.remove();
-    restriccionCount--;
-  });
-});
-
 document.getElementById('vrpForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -74,7 +51,6 @@ document.getElementById('vrpForm').addEventListener('submit', async function (e)
   const datos = {
     almacen: almacenCoords,
     max_carga,
-    restricciones_trafico: restricciones
   };
 
   contenedor.innerHTML = "⌛ Procesando rutas...";
