@@ -79,7 +79,7 @@ document.getElementById('vrpForm').addEventListener('submit', async function (e)
 
   contenedor.innerHTML = "⌛ Procesando rutas...";
   try {
-    const res = await fetch('http://localhost:8000/vrp', {
+    const res = await fetch('https://vrp-backend.onrender.com/vrp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(datos)
